@@ -1,0 +1,12 @@
+@import "../../styles/utilities/index";
+
+header {
+  @include flexbox(row, center, center);
+}
+
+.__wrapper {
+  @include flexbox(row, flex-start, center);
+  flex-grow: 1;
+
+  padding: 1em;
+}

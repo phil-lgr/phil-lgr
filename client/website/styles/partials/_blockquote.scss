@@ -1,0 +1,22 @@
+@import "../utilities/index";
+
+$blockquote-offset: 1.4em;
+
+blockquote {
+  position: relative;
+  line-height: 1.9;
+
+  margin-left: $blockquote-offset;
+  max-width: $breakpoint-mobile-small;
+
+  font-style: italic;
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: -$blockquote-offset;
+    width: 5px;
+    top: 0.3em;
+    bottom: 0.3em;
+    background-color: rgba(151, 151, 151, 0.28);
+  }
+}

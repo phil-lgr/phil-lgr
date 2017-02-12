@@ -1,0 +1,54 @@
+//================================================================
+// SHARED STYLES
+//================================================================
+
+//================================================================
+// LAYOUTS
+//
+// (flexbox helper classes, commonly used layouts,
+// grids, media-queries, ...)
+//================================================================
+
+@import "../../shared/styles/layouts/_index";
+
+
+//================================================================
+// WEBSITE APP STYLES
+//================================================================
+
+//================================================================
+// BASE (html, body, typography...)
+//================================================================
+
+@import "partials/_base";
+@import "partials/_headings";
+
+//================================================================
+// COMPONENTS
+//
+// (can be composed of BASE elements and other components)
+//================================================================
+
+@import "partials/_paragraphs";
+@import "partials/_links";
+@import "partials/_buttons";
+@import "partials/_blockquote";
+@import "partials/_code";
+@import "partials/_italic";
+@import "partials/_lists";
+@import "partials/_hr";
+@import "partials/_mark";
+
+//================================================================
+// STATES (print, no JS, ...)
+//================================================================
+
+@import "states/_index";
+
+//================================================================
+// SHAME
+//
+// (ugly hacks and overrides that must be replaced at some point)
+//================================================================
+
+@import "shame/_index";

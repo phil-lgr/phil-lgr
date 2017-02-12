@@ -1,0 +1,229 @@
+
+//================================================================
+// MONOKAI COLORS
+//================================================================
+
+$color-monokai-foreground: #F8F8F2;
+$color-monokai-background: #212121;
+$color-monokai-highlight: #49483E;
+$color-monokai-selection: #49483E;
+$color-monokai-function: #A6E22E;
+$color-monokai-function-arguments: #FD971F;
+$color-monokai-function-name: #66D9EF;
+$color-monokai-number: #AE81FF;
+$color-monokai-invalid-background: #F92672;
+$color-monokai-invalid-foreground: #F8F8F0;
+
+
+
+
+//================================================================
+// GREY PALETTE
+//================================================================
+
+$color-grey:
+        rgb(253, 253, 253)
+        #e0e0e0
+        rgb(214, 214, 214)
+        rgb(186, 186, 186)
+        rgb(151, 151, 151)
+        rgb(135, 135, 135)
+        rgb(120, 120, 120)
+        rgb(105, 105, 105)
+        rgb(89, 89, 89)
+        rgb(74, 74, 74)
+        rgb(59, 59, 59)
+        rgb(250, 245, 245)
+        rgb(214, 179, 179)
+        rgb(162, 129, 129)
+        rgb(139, 127, 127)
+;
+
+$color-grey-50: nth($color-grey, 1);
+$color-grey-75: nth($color-grey, 2);
+$color-grey-100: nth($color-grey, 3);
+$color-grey-200: nth($color-grey, 4);
+$color-grey-300: nth($color-grey, 5);
+$color-grey-400: nth($color-grey, 6);
+$color-grey-500: nth($color-grey, 7);
+$color-grey-600: nth($color-grey, 8);
+$color-grey-700: nth($color-grey, 9);
+$color-grey-800: nth($color-grey, 10);
+$color-grey-900: nth($color-grey, 11);
+$color-grey-A100: nth($color-grey, 12);
+$color-grey-A200: nth($color-grey, 13);
+$color-grey-A400: nth($color-grey, 14);
+$color-grey-A700: nth($color-grey, 15);
+
+//================================================================
+// GREEN PALETTE
+//================================================================
+
+$color-green:
+rgb(171, 246, 196)
+rgb(101, 239, 148)
+rgb(50, 234, 113)
+rgb(20, 194, 79)
+rgb(17, 166, 67)
+rgb(14, 138, 56)
+rgb(11, 110, 45)
+rgb(8, 82, 33)
+rgb(6, 55, 22)
+rgb(3, 27, 11)
+rgb(152, 255, 187)
+rgb(50, 255, 119)
+rgb(3, 199, 70)
+rgb(12, 166, 64)
+;
+
+$color-green-50: nth($color-green, 1);
+$color-green-100: nth($color-green, 2);
+$color-green-200: nth($color-green, 3);
+$color-green-300: nth($color-green, 4);
+$color-green-400: nth($color-green, 5);
+$color-green-500: nth($color-green, 6);
+$color-green-600: nth($color-green, 7);
+$color-green-700: nth($color-green, 8);
+$color-green-800: nth($color-green, 9);
+$color-green-900: nth($color-green, 10);
+$color-green-A100: nth($color-green, 11);
+$color-green-A200: nth($color-green, 12);
+$color-green-A400: nth($color-green, 13);
+$color-green-A700: nth($color-green, 14);
+
+//================================================================
+// BLUE PALETTE
+//================================================================
+
+$color-blue:
+        rgb(171, 217, 246)
+        rgb(101, 186, 239)
+        rgb(50, 163, 234)
+        rgb(20, 126, 194)
+        rgb(17, 108, 166)
+        rgb(14, 90, 138)
+        rgb(11, 72, 110)
+        rgb(8, 54, 82)
+        rgb(6, 36, 55)
+        rgb(3, 18, 27)
+        rgb(152, 215, 255)
+        rgb(50, 176, 255)
+        rgb(3, 124, 199)
+        rgb(12, 106, 166)
+;
+
+$color-blue-50: nth($color-blue, 1);
+$color-blue-100: nth($color-blue, 2);
+$color-blue-200: nth($color-blue, 3);
+$color-blue-300: nth($color-blue, 4);
+$color-blue-400: nth($color-blue, 5);
+$color-blue-500: nth($color-blue, 6);
+$color-blue-600: nth($color-blue, 7);
+$color-blue-700: nth($color-blue, 8);
+$color-blue-800: nth($color-blue, 9);
+$color-blue-900: nth($color-blue, 10);
+$color-blue-A100: nth($color-blue, 11);
+$color-blue-A200: nth($color-blue, 12);
+$color-blue-A400: nth($color-blue, 13);
+$color-blue-A700: nth($color-blue, 14);
+
+//================================================================
+// RED PALETTE
+//================================================================
+
+$color-red:
+        rgb(246, 171, 171)
+        rgb(239, 101, 101)
+        rgb(234, 50, 50)
+        rgb(194, 20, 20)
+        rgb(166, 17, 17)
+        rgb(138, 14, 14)
+        rgb(110, 11, 11)
+        rgb(82, 8, 8)
+        rgb(55, 6, 6)
+        rgb(27, 3, 3)
+        rgb(255, 152, 152)
+        rgb(255, 50, 50)
+        rgb(199, 3, 3)
+        rgb(166, 12, 12)
+;
+
+$color-red-50: nth($color-red, 1);
+$color-red-100: nth($color-red, 2);
+$color-red-200: nth($color-red, 3);
+$color-red-300: nth($color-red, 4);
+$color-red-400: nth($color-red, 5);
+$color-red-500: nth($color-red, 6);
+$color-red-600: nth($color-red, 7);
+$color-red-700: nth($color-red, 8);
+$color-red-800: nth($color-red, 9);
+$color-red-900: nth($color-red, 10);
+$color-red-A100: nth($color-red, 11);
+$color-red-A200: nth($color-red, 12);
+$color-red-A400: nth($color-red, 13);
+$color-red-A700: nth($color-red, 14);
+
+//================================================================
+// ORANGE PALETTE
+//================================================================
+
+$color-orange:
+        rgb(255, 242, 220)
+        rgb(255, 213, 144)
+        rgb(255, 191, 88)
+        rgb(255, 164, 16)
+        rgb(241, 149, 0)
+        rgb(210, 130, 0)
+        rgb(179, 111, 0)
+        rgb(149, 92, 0)
+        rgb(118, 73, 0)
+        rgb(88, 54, 0)
+        rgb(255, 238, 210)
+        rgb(255, 199, 108)
+        rgb(255, 160, 6)
+        rgb(235, 146, 0)
+;
+
+$color-orange-50: nth($color-orange, 1);
+$color-orange-100: nth($color-orange, 2);
+$color-orange-200: nth($color-orange, 3);
+$color-orange-300: nth($color-orange, 4);
+$color-orange-400: nth($color-orange, 5);
+$color-orange-500: nth($color-orange, 6);
+$color-orange-600: nth($color-orange, 7);
+$color-orange-700: nth($color-orange, 8);
+$color-orange-800: nth($color-orange, 9);
+$color-orange-900: nth($color-orange, 10);
+$color-orange-A100: nth($color-orange, 11);
+$color-orange-A200: nth($color-orange, 12);
+$color-orange-A400: nth($color-orange, 13);
+$color-orange-A700: nth($color-orange, 14);
+
+
+
+
+//================================================================
+// PRIMARY, ACCENT AND WARN COLORS
+//================================================================
+
+$color-primary: $color-blue-400;
+$color-primary-darker: $color-blue-500;
+//$color-accent: $color-green-400;
+//$color-accent-darker: $color-green-500;
+$color-accent: $color-orange-400;
+$color-accent-darker: $color-orange-500;
+$color-warn: $color-red-300;
+$color-warn-darker: $color-red-500;
+
+
+
+
+
+
+
+
+
+
+
+
+

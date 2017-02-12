@@ -1,0 +1,83 @@
+//================================================================
+// IMPORTS FIRST
+//================================================================
+
+//@import "./utilities/index";
+
+//================================================================
+// COMMENTS
+//================================================================
+
+//================================================================
+// COMMENTS WITH EXAMPLES
+//
+// (for tables, etc, examples)
+//================================================================
+
+//================================================================
+// CLASS DECLARATION
+//================================================================
+
+// GLOBAL SCOPE
+
+:global {
+  .global-class {
+
+  }
+}
+
+// LOCAL SCOPE WITH CSS MODULES
+
+// e.g in style-guide.js:
+// import './style-guide.scss' of
+
+.element {
+  // some props
+  &--modifier-name-value {
+    // state
+  }
+}
+
+// becomes:
+.style-guide__element {
+  // some props
+}
+
+.style-guide__element--modifier-name-value {
+  // state
+}
+
+// CLASS PROPERTIES ORDER
+
+.element {
+  @extend .element; // extend first
+  //@include flexbox(); // include second
+
+  font-size: 2em; // fonts props since other props can use em/rem units
+  font-weight: bold;
+
+  position: relative; // position and display
+  display: none;
+  display: flex; // flex props if needed
+  flex: 1 1 auto;
+
+  min-height: 40px; // box model
+  min-width: 40px;
+  height: 40px;
+  width: 40px;
+
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+
+  color: red; // background, colors, shadows, other visual styles
+  background: red;
+
+  &:focus { // pseudo classes
+
+  }
+
+  &--modifier-name-value { // modifier--value
+
+  }
+}

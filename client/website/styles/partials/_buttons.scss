@@ -1,0 +1,213 @@
+@import "../utilities/index";
+
+button {
+  display: inline-block;
+  touch-action: manipulation;
+
+  font-size: 1em;
+
+  min-height: 52px;
+  min-width: 30px;
+  padding: 0 1em;
+  vertical-align: bottom;
+  line-height: 50px;
+
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: $border-radius-default;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  cursor: pointer;
+
+  > a {
+    text-decoration: none;
+    &:visited, &:active, &:link, &:visited {
+      color: currentColor;
+    }
+  }
+
+}
+
+:global {
+  .button {
+
+    //================================================================
+    // INTENTS
+    //================================================================
+
+    &--default {
+      @include button-relief(#fff, $color-grey-50);
+      color: $color-monokai-selection;
+
+      // since the background is white, need to adjust here
+      border-color: rgba(16, 22, 26, 0.1) rgba(16, 22, 26, 0.1) rgba(16, 22, 26, 0.17) rgba(16, 22, 26, 0.1);
+      @include ios-tap-highlight($color-monokai-selection);
+
+      &:active {
+        @include button-relief-active();
+        background-color: $color-grey-100;
+      }
+    }
+
+    &--primary {
+      @include button-relief(rgba(255, 255, 255, 0.1), $color-primary);
+      color: white;
+
+      &:active {
+        @include button-relief-active();
+        background-color: $color-primary-darker;
+      }
+    }
+
+    &--accent {
+      @include button-relief(rgba(255, 255, 255, 0.1), $color-accent);
+      color: white;
+
+      &:active {
+        @include button-relief-active();
+        background-color: $color-accent-darker;
+      }
+    }
+
+    &--warn {
+      @include button-relief(rgba(255, 255, 255, 0.1), $color-warn);
+      color: white;
+
+      &:active {
+        @include button-relief-active();
+        background-color: $color-warn-darker;
+      }
+    }
+
+    //================================================================
+    // SIZES
+    //================================================================
+    &--huge {
+      font-size: 2.2em;
+      line-height: 80px;
+      min-height: 82px;
+    }
+
+    &--large {
+      font-size: 1.2em;
+      line-height: 60px;
+      min-height: 62px;
+    }
+
+    &--medium {
+      font-size: 1em;
+      line-height: 50px;
+      min-height: 52px;
+    }
+
+    &--small {
+      font-size: 0.7em;
+      line-height: 40px;
+      min-height: 44px;
+    }
+
+    &--tiny {
+      font-size: 0.7em;
+      line-height: 38px;
+      min-height: 40px;
+    }
+
+    //================================================================
+    // VARIATIONS
+    //================================================================
+
+    @mixin button--border($color) {
+
+      text-transform: none;
+      letter-spacing: 0;
+      background-color: white;
+      font-weight: normal;
+
+      $border-radius: 1px;
+      $color-lighter: adjust_color($color, $lightness: 50%);
+
+      position: relative;
+      color: $color;
+
+      background-color: white;
+      border: 1px solid transparent;
+      border-radius: $border-radius-default;
+      background-clip: padding-box;
+
+      &::after {
+        position: absolute;
+        top: -$border-radius;
+        bottom: -$border-radius;
+        left: -$border-radius;
+        right: -$border-radius;
+        background: linear-gradient(30deg, transparentize($color, 0.5) 0%, $color 100%);
+        content: '';
+        z-index: -1;
+        border-radius: $border-radius-default;
+      }
+
+      @include ios-tap-highlight($color-lighter);
+      &:active {
+        background-color: $color-lighter;
+      }
+
+    }
+
+    &--border {
+
+      &--default {
+        @include button--border($color-monokai-selection);
+      }
+
+      &--primary {
+        @include button--border($color-primary);
+      }
+
+      &--accent {
+        @include button--border($color-accent);
+      }
+
+      &--warn {
+        @include button--border($color-warn);
+      }
+    }
+
+    //================================================================
+    // BUTTON GROUP
+    //================================================================
+
+    &--group {
+      @include flexbox();
+
+      > button {
+
+        border-radius: 0;
+
+        &::after {
+          border-radius: 0;
+        }
+
+        margin: 0 -1px 0 0 !important;
+
+        &:first-child {
+          border-radius: $border-radius-default 0 0 $border-radius-default;
+          &::after {
+            border-radius: $border-radius-default 0 0 $border-radius-default;
+          }
+        }
+
+        &:last-child {
+          border-radius: 0 $border-radius-default $border-radius-default 0;
+          &::after {
+            border-radius: 0 $border-radius-default $border-radius-default 0;
+          }
+        }
+      }
+    }
+  }
+}

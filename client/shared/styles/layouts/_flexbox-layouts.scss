@@ -1,0 +1,45 @@
+@import "../mixins/index";
+
+:global {
+  .flex {
+    @include flexbox();
+
+    &--col {
+      flex-direction: column;
+    }
+
+    &--justify-content-center {
+      justify-content: center;
+    }
+
+    &--justify-content-end {
+      justify-content: flex-end;
+    }
+
+    &--align-items-center {
+      align-items: center;
+    }
+
+    &--align-items-end {
+      align-items: center;
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+    }
+
+    &--grow-1 {
+      flex-grow: 1;
+    }
+
+    &--grow-2 {
+      flex-grow: 2;
+    }
+
+    &--shrink-1 {
+      flex-shrink: 1;
+    }
+
+  }
+}
+

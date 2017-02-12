@@ -1,0 +1,7 @@
+@import "../utilities/index";
+
+mark {
+  background-color: transparentize($color-monokai-function, 0.4);
+  color: currentColor;
+  padding: 0 4px 0 3px;
+}

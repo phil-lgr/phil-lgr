@@ -1,0 +1,33 @@
+@import "../utilities/_index";
+
+html {
+  box-sizing: border-box; // border-box everywhere
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // prevent tap highlight
+  -webkit-font-smoothing: antialiased;
+  touch-action: manipulation; // ensure fast clicks on ios safari 9, 10 https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+
+  height: 100%; // full height
+
+  background-color: white;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; // border-box everywhere
+  -webkit-tap-highlight-color: inherit; // prevent tap highlight
+}
+
+body {
+  height: 100%; // full height
+
+  text-rendering: optimizeLegibility; // enables kerning and optional ligatures, in webkit browser
+  -webkit-font-smoothing: antialiased;
+
+  font-family: $font-default; // default fonts config
+
+  font-size: $base-font-size;
+  @media (min-width: $breakpoint-mobile-small) { // cap font size increase
+    font-size: calc(#{$font-size-min} + #{$breakpoint-mobile-small/100});
+  }
+
+  color: $color-monokai-background;
+}
