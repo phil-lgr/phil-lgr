@@ -12,18 +12,12 @@ module.exports = [
         filename: isDevServer ? 'website.html' : 'index.html',
         chunks: ['website-vendor', 'website']
     }, {
-        name: 'style-guide',
-        path: './client/website/pages/style-guide/style-guide',
-        template: './client/website/pages/style-guide/style-guide.html',
-        filename: 'style-guide.html',
-        chunks: ['website-vendor', 'style-guide']
-    }, {
-        name: 'portfolio',
-        path: './client/website/pages/portfolio/portfolio',
-        template: './client/website/pages/portfolio/portfolio.html',
-        filename: 'portfolio.html',
-        chunks: ['website-vendor', 'portfolio']
+        name: 'example-page',
+        path: './client/website/pages/example-page/example-page',
+        template: './client/website/pages/example-page/example-page.html',
+        filename: 'example-page.html',
+        chunks: ['website-vendor', 'example-page']
     }, {
         name: 'website-vendor',
-        path: './client/website/website-vendor.ts'
+        path: './client/website/website-vendor.js'
     }];

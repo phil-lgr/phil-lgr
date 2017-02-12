@@ -4,85 +4,15 @@
     <%= require('ejs-loader!../../../shared/templates/head.html')() %>
 </head>
 <body>
-<%= require('ejs-loader!../../components/header/header.html')() %>
+<%= require('ejs-loader!../../components/example-component/header.html')() %>
 
+<article class="example-page">
 
-<article class="style-guide">
+    <h1>Example page</h1>
 
-    <h1>Style guide</h1>
+    <button>I am a button</button>
 
-    <ul class="style-guide__todos">
-        <li>
-            <del><code>TODO: headings</code></del>
-        </li>
-        <li>
-            <del><code>TODO: buttons</code></del>
-        </li>
-        <li>
-            <del><code>TODO: blockquote</code></del>
-        </li>
-        <li>
-            <del><code>TODO: mark, a, b, i, em, code</code></del>
-        </li>
-        <li>
-            <del><code>TODO: buttons groups</code></del>
-        </li>
-        <li><code>TODO: inputs, inputs groups</code></li>
-        <li><code>TODO: cards</code></li>
-        <li><code>TODO: incrementers</code></li>
-        <li><code>TODO: loaders</code></li>
-        <li><code>TODO: on/off switches</code></li>
-        <li><code>TODO: checkboxes</code></li>
-        <li><code>TODO: slider</code></li>
-        <li><code>TODO: flexbox layouts</code></li>
-    </ul>
-
-    <p>
-        The style guide is a reference page that shows how your application should look like.
-        It starts with basic blocks like buttons, inputs, headings, tables, text, typography and colors and then
-        continues with more complex UI elements like input groups, button groups, dropdowns, calendar and more.
-    </p>
-
-    <h5>
-        As a general rule, any piece of UI that is going to be used more than
-        <mark>one</mark>
-        time needs to be added to the style guide.
-    </h5>
-
-    <p>
-        It's certainly possible to go beyond that
-        initial scope and extend the style
-        guide to include larger scale <em>patterns</em> like layouts, or page/section template.
-    </p>
-
-    <p>
-        If you are looking for more examples of great style guides you can check
-        <a target="_blank" href="http://styleguides.io">styleguides.io</a>.
-    </p>
-
-    <hr/>
-
-    <%= require('ejs-loader!./style-guide-headings.html')() %>
-
-    <hr/>
-
-    <%= require('ejs-loader!./style-guide-typography.html')() %>
-
-    <hr/>
-
-    <%= require('ejs-loader!./style-guide-quotes.html')() %>
-
-    <hr/>
-
-    <%= require('ejs-loader!./style-guide-buttons.html')() %>
-
-    <hr/>
-
-    <%= require('ejs-loader!./style-guide-colors.html')(require('./colors.js').default) %>
-
-    <!--<%= require('html-loader!./style-guide-inputs.html') %>-->
+    <%= require('ejs-loader!./example-page-partial.html')(require('./colors.js').default) %>
 </article>
-
 </body>
-<%= require('ejs-loader!../../../shared/templates/firebase-scripts.html')() %>
 </html>

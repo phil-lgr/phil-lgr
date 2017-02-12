@@ -1,8 +1,8 @@
-class ExampleAppService {
+class ExampleWebsiteService {
 
     static hello() {
-        return 'hello app service';
+        return 'hello website service';
     }
 }
 
-export default ExampleAppService;
+export default ExampleWebsiteService;

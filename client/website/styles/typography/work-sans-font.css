@@ -2,56 +2,56 @@
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-Regular.woff') format('woff');
+	src: url('font-files/subset-WorkSans-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-ExtraLight.woff') format('woff');
+	src: url('font-files/subset-WorkSans-ExtraLight.woff') format('woff');
 	font-weight: 200;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-SemiBold.woff') format('woff');
+	src: url('font-files/subset-WorkSans-SemiBold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-Light.woff') format('woff');
+	src: url('font-files/subset-WorkSans-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-Black.woff') format('woff');
+	src: url('font-files/subset-WorkSans-Black.woff') format('woff');
 	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-Thin.woff') format('woff');
+	src: url('font-files/subset-WorkSans-Thin.woff') format('woff');
 	font-weight: 100;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-Bold.woff') format('woff');
+	src: url('font-files/subset-WorkSans-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Work Sans';
-	src: url('subset-WorkSans-ExtraBold.woff') format('woff');
+	src: url('font-files/subset-WorkSans-ExtraBold.woff') format('woff');
 	font-weight: 800;
 	font-style: normal;
 }

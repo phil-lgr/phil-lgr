@@ -1,10 +1,5 @@
+import {_forEach} from "lodash-es/forEach";
 
-function helloApp(args) {
-    var a = [1, 2, 3];
-    _.forEach((val) => {
-        console.log(val)
-    }, a);
-    console.log('hello app!')
-}
-
-helloApp();
+_forEach([1, 2], x => {
+    console.log(x);
+});

@@ -1,8 +1,8 @@
-class ExampleService {
+class ExampleSharedService {
 
     static hello() {
-        return 'hello';
+        return 'hello shared service';
     }
 }
 
-export default ExampleService;
+export default ExampleSharedService;
