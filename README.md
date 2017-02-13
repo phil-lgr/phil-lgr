@@ -1,7 +1,7 @@
 # Overview (work in progress...)
 
 This is a (yet another) custom webpack (>2.x.x) starter/boilerplate built
-from scratch to create web apps (PWA), Cordova apps and static websites.
+from scratch to create web apps (PWA), Cordova apps and static websites from a common codebase.
 
 ## Supported languages
  - ES6
