@@ -19,6 +19,7 @@ const uglifyJsOptions = {
     output: {
         comments: false
     },
+    except: ['$super', '$', 'exports', 'require', 'angular']
 };
 
 module.exports = new webpack.optimize.UglifyJsPlugin(uglifyJsOptions);

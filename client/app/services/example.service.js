@@ -1,8 +1,9 @@
+"use strict";
 class ExampleAppService {
-
     static hello() {
         return 'hello app service';
     }
 }
-
-export default ExampleAppService;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = ExampleAppService;
+//# sourceMappingURL=example.service.js.map

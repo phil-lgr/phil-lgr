@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/phil-lgr/webpack-starter#readme",
   "devDependencies": {
+    "@types/angular": "1.6.5",
     "@types/lodash-es": "^4.14.4",
     "autoprefixer": "^6.6.1",
     "babel": "^6.5.2",
@@ -51,6 +52,7 @@
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "2.25.0",
     "lodash": "^4.17.4",
+    "ng-annotate-loader": "1.2.1",
     "node-sass": "^4.1.1",
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
@@ -69,7 +71,9 @@
     "webpack-visualizer-plugin": "^0.1.10"
   },
   "dependencies": {
-    "lodash-es": "^4.17.4",
-    "normalize.css": "^5.0.0"
+    "angular": "1.6.2",
+    "angular-ui-router": "1.0.0-rc.1",
+    "lodash-es": "4.17.4",
+    "normalize.css": "5.0.0"
   }
 }
