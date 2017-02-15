@@ -30,6 +30,7 @@ This boilerplate outputs three separate applications:
  - Import SASS variable to JS with `sass-variable-loader` (usefull for style guides)
  - JS minification with UglifyJS with source maps working (both `.ts` and ES6 `.js` files)
  - Webpack tree shaking works but not for all cases, see open issues for details
+ - Support for installable web app (favicons, manifest.json, browserconfig.xml, etc)
 
 ## Branches
 
@@ -60,4 +61,10 @@ npm start -- --host=localhost
 
 Instead of UglifyJS, it's possible to use Google Closure Compiler
 in this setup, check `closure-compiler.plugin.conf.js` for more details.
+
+### See Also/Credits
+
+http://www.favicon-generator.org/
+
+https://tomitm.github.io/appmanifest/
 
