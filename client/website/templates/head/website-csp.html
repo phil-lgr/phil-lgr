@@ -1,0 +1,19 @@
+<!-- CONTENT SECURITY POLICY FOR PROD -->
+<!--FOR USAGE SEE https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_Security_Policy -->
+<% if(!htmlWebpackPlugin.options.isDevServer) { %>
+<meta http-equiv="Content-Security-Policy"
+      content="default-src
+                    'self'
+                    data:
+                    gap:
+                    https://ssl.gstatic.com
+                    'unsafe-eval';
+                style-src
+                    'self'
+                    'unsafe-inline';
+                media-src *;
+                img-src
+                    'self'
+                    data:
+                    content:;">
+<% } %>

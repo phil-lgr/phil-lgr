@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%= require('ejs-loader!../shared/templates/head.html')() %>
-</head>
+<%= require('ejs-loader!./website-head.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
 <body>
 <div>
     Hello Website

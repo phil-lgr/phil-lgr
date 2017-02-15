@@ -9,15 +9,17 @@ const extractTextPluginConf = require('./plugins/extract-text.plugin.conf.js');
 
 module.exports = {
     common: [
-        copyPluginConf,
+        copyPluginConf.common,
     ],
     dev: [
         // commonChunkPluginConf.dev,
+        copyPluginConf.dev,
         loaderOptionsPluginConf.dev,
         ...htmlPluginConf.dev,
     ],
     prodWebsite: [
         // commonChunkPluginConf.prod,
+        copyPluginConf.prodWebsite,
         loaderOptionsPluginConf.prod,
         ...htmlPluginConf.prodWebsite,
         extractTextPluginConf.prod,
@@ -26,6 +28,7 @@ module.exports = {
     ],
     prodApp: [
         // commonChunkPluginConf.prod,
+        copyPluginConf.prodApp,
         loaderOptionsPluginConf.prod,
         ...htmlPluginConf.prodApp,
         extractTextPluginConf.prod,
@@ -33,6 +36,7 @@ module.exports = {
     ],
     prodCordova: [
         // commonChunkPluginConf.prod,
+        copyPluginConf.prodCordova,
         loaderOptionsPluginConf.prod,
         ...htmlPluginConf.prodCordova,
         extractTextPluginConf.prod,

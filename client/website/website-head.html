@@ -1,0 +1,8 @@
+<!-- COMMON HEAD FOR ALL WEBSITE -->
+<head>
+    <%= require('ejs-loader!../shared/templates/head/basic-meta-tags.html')() %>
+    <%= require('ejs-loader!./templates/head/website-meta-tags.html')() %>
+    <%= require('ejs-loader!./templates/head/website-csp.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
+    <%= require('ejs-loader!../shared/templates/head/humans-robots.html')() %>
+    <%= require('ejs-loader!../shared/templates/head/favicons.html')() %>
+</head>

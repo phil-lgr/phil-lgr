@@ -1,0 +1,14 @@
+<!-- COMMON HEAD FOR WEB APP & CORDOVA -->
+<head>
+    <%= require('ejs-loader!../shared/templates/head/basic-meta-tags.html')() %>
+
+    <% if(htmlWebpackPlugin.options.isCordovaApp) { %>
+    <%= require('ejs-loader!./templates/head/cordova-csp.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
+    <script src="cordova.js"></script>
+    <% } else { %>
+    <%= require('ejs-loader!./templates/head/app-meta-tags.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
+    <%= require('ejs-loader!./templates/head/app-csp.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
+    <%= require('ejs-loader!../shared/templates/head/favicons.html')() %>
+    <%= require('ejs-loader!../shared/templates/head/humans-robots.html')() %>
+    <% } %>
+</head>

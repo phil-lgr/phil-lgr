@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <% if(htmlWebpackPlugin.options.isCordovaApp) { %>
-    <script src="cordova.js"></script>
-    <% } %>
-</head>
+<%= require('ejs-loader!./app-head.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
 <body ng-app="app" ng-strict-di>
 <app></app>
+<body>
 </body>
 </html>
