@@ -35,7 +35,7 @@ This boilerplate outputs three separate applications:
 ## Branches
 
  - `master` has no JS frameworks, just plain hello world examples
- - `angularjs` for AngularJS (v1.6.x) setup with TypeScript + Rxjs
+ - `angularjs-typescript` has AngularJS (v1.6.x) setup with TypeScript + RxJS
  - might add more in the future (e.g. Angular, React)
 
 ## Setup
