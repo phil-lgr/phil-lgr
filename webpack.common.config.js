@@ -4,7 +4,7 @@ function CommonConfig() {
         module: {
             rules: [...require('./webpack-config/loaders.conf').common]
         },
-        plugins: [...require('./webpack-config/plugins.conf').common]
+        plugins: [...require('./webpack-config/plugins.conf').common],
     }
 }
 
