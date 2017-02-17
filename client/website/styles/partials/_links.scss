@@ -1,14 +1,13 @@
 @import "../utilities/_index";
 
 a {
-  color: $color-monokai-highlight;
+  color: $color-monokai-function-arguments;
 
   &:link, &:visited, &:hover, &:active {
-    color: $color-monokai-highlight;
+    color: $color-monokai-function-arguments;
   }
 
   &:active {
-    color: $color-monokai-function-name;
+    color: $color-monokai-function-arguments;
   }
-
 }

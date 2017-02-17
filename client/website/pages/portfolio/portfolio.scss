@@ -1,0 +1,10 @@
+@import "../../styles/utilities/index";
+
+:global {
+  .portfolio {
+    @include flexbox(column, flex-start, flex-start);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+}

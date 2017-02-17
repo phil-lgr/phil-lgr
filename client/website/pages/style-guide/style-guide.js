@@ -2,12 +2,14 @@
 // COMPONENTS IMPORTS
 //================================================================
 
-import '../../components/example-component/header';
+import '../../components/header/header';
 
 //================================================================
 // SCSS IMPORTS
 //================================================================
 
+import '../../styles/typography/space-mono-font.css';
 import '../../styles/typography/work-sans-font.css';
+import '../../styles/typography/menlo-regular-font.css';
 import '../../website.scss';
-import './example-page.scss';
+import './style-guide.scss';

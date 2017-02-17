@@ -1,0 +1,164 @@
+//================================================================
+// SHARED STYLES
+//================================================================
+//================================================================
+// LAYOUTS
+//
+// (flexbox helper classes, commonly used layouts,
+// grids, media-queries, ...)
+//================================================================
+@import "../shared/styles/layouts/_index";
+//================================================================
+// WEBSITE APP STYLES
+//================================================================
+//================================================================
+// BASE (html, body, typography...)
+//================================================================
+@import "styles/partials/_base";
+@import "styles/partials/_headings";
+//================================================================
+// STYLE COMPONENTS
+//
+// (can be composed of BASE elements and other components)
+//================================================================
+@import "styles/partials/_paragraphs";
+@import "styles/partials/_links";
+@import "styles/partials/_buttons";
+@import "styles/partials/_blockquote";
+@import "styles/partials/_code";
+@import "styles/partials/_italic";
+@import "styles/partials/_lists";
+@import "styles/partials/_hr";
+@import "styles/partials/_mark";
+//================================================================
+// STATES (print, no JS, ...)
+//================================================================
+@import "styles/states/_index";
+//================================================================
+// SHAME
+//
+// (ugly hacks and overrides that must be replaced at some point)
+//================================================================
+@import "styles/shame/_index";
+
+//================================================================
+// COMPONENTS
+//================================================================
+
+.__wrapper {
+  @include flexbox(column);
+  width: 100%;
+  @media (min-width: $breakpoint-mobile-medium) {
+    flex-flow: row;
+  }
+}
+
+.__sidebar {
+  @include flexbox(column, flex-start, stretch, nowrap, 0, 0, auto);
+  border-right: 2px solid $color-blue-700;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1em;
+  color: white;
+  background: $color-blue-700;
+  @media (min-width: $breakpoint-mobile-medium) {
+    width: 13em;
+    height: 100vh;
+  }
+}
+
+.__sidebar-text {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.__sidebar-picture {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.__sidebar-a {
+  margin: 0.2em 0;
+  font-size: 0.8em;
+}
+
+.__projects {
+  @include flexbox(column);
+
+  background: rgba(241, 241, 241, 0.32);
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 2em;
+  @media (min-width: $breakpoint-mobile-medium) {
+    width: calc(100% - 13em);
+    height: 100vh;
+  }
+}
+
+.__project {
+  width: 100%;
+  padding: 1em;
+  margin: 2em 0;
+  box-shadow: 1px 5px 11px 4px $color-grey-200;
+  background: white;
+}
+
+.__screenshots {
+  @include flexbox(row,flex-start, flex-start, wrap);
+  margin: 0.5em 0 1em 0;
+}
+
+.__screenshot {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.__list {
+  margin: 0.5em 0 1em 1em;
+  padding: 0 1em 0 0.5em;
+  font-size: 0.9em;
+  line-height: 1;
+  > li {
+    padding: 0 0 0 0.5em;
+    margin: 0;
+  }
+}
+
+.__tags {
+  @include flexbox(row, flex-start, center, wrap);
+}
+
+.__tag {
+  font-family: $font-headings;
+  min-width: 20px;
+  background: $color-grey-700;
+  font-size: 0.8em;
+  padding: 0.45em;
+  margin-right: 0.25em;
+  margin-bottom: 0.25em;
+  border-radius: 4px;
+  color: white;
+
+  &--language {
+    background: $color-monokai-function-arguments;
+  }
+
+  &--library {
+    background: $color-monokai-function;
+    color: $color-monokai-background;
+  }
+
+  &--platform {
+    background: $color-monokai-selection;
+  }
+}

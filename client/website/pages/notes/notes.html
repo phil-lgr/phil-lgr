@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('html-loader!../../head.html') %>
+    <!-- CONTENT SECURITY POLICY FOR PROD -->
+    <% if(!htmlWebpackPlugin.options.isDevServer) { %>
+    <%= require('html-loader!../../csp.html') %>
+    <% } %>
+</head>
+<body>
+
+<article class="notes">
+
+
+</article>
+
+<article>
+    <h1>Flexbox</h1>
+
+    <h2>Defaults</h2>
+
+    <p>For flex childs, the <code>flex-basis</code> property defaults to <code>auto</code></p>
+
+    <h2>Shorthands</h2>
+
+    <p>Notice that the short hand does not set the same <code>flex-basis</code> as the default</p>
+
+    <code>flex: 1; // flex-grow: 1; flex-shrink: 1; flex-basis: 0;</code>
+    <code>flex: 20px; // flex-grow: 1; flex-shrink: 1; flex-basis: 20px;</code>
+    <code>flex: 0 40px; // flex-grow: 0; flex-shrink: 1; flex-basis: 40px;</code>
+</article>
+
+<article>
+    <h1>Git</h1>
+
+    <h2>Common Commands</h2>
+
+    <p><code>git init</code> initialize git repo</p>
+    <p><code>git add -A</code> add all changes</p>
+    <p><code>git status</code> status of code changes</p>
+    <p><code>git commit</code> commit</p>
+    <p><code>git fetch</code> tell local repo to grab latest changes</p>
+    <p><code>git merge</code> merge changes in local code</p>
+    <p><code>git pull</code> fetch and merge changes on the current branch</p>
+    <p><code>git branch</code> list branches</p>
+    <p><code>git checkout branch-name</code> change to branch-name</p>
+    <p><code>git checkout -b branch-name</code> create branch-name and checkout</p>
+    <p><code>git checkout -</code> change to last branch</p>
+    <p><code>git merge branch-name</code> merge current branch with branch-name</p>
+    <p><code>git branch -d branch-name</code> delete branch-name</p>
+    <p><code>git stash</code> save changes locally</p>
+    <p><code>git stash apply</code> take stashed changes and reapply them</p>
+    <p><code>git log</code> display last commits, navigate like in vim</p>
+    <p><code>git log --oneline</code> formats git logs to one line</p>
+    <p><code>git show 21349j</code> log a single commit changes</p>
+    <p><code>git log --decorate</code> includes branch information of each commit</p>
+    <p><code>git log --graph</code> display git branches as graphs</p>
+    <p><code>git log -p</code> display details and code changes of each commit</p>
+    <p><code>git log -3</code> display only the three last commits</p>
+    <p><code>git log --grep="copyright"</code> grep the commit messages for "copyright"</p>
+    <p><code>git diff</code> show difference of commited changes vs local</p>
+    <p><code>git diff HEAD --stat</code> display differences of local (cached and commited) vs the HEAD</p>
+    <p><code>git diff --stat</code> only shows number of lines changes</p>
+    <p><code>git fetch && git diff origin/branch-name</code> fetch changes and preview the changes that would be merged</p>
+    <p><code>git fetch && git diff origin/branch-name README.md</code> for a specific file</p>
+    <p><code>git blame webpack.prod.config.js</code> check who changed a file</p>
+    <p><code>git tag v.1.0.1</code> create reference to a commit</p>
+    <p><code>git push --tags</code> push tags to remote</p>
+    <p><code>git push -u origin branch-name</code> push branch and set upstream</p>
+    <p><code>git rebase -i origin/branch-name</code> interactive rebase, pick and choose commits to squash into one commit
+        this one changes git history
+    </p>
+    <p><code>git bisect start</code> start bisect state</p>
+    <p><code>git bisect bad</code> mark current state as bad, i.e. tests are failing now</p>
+    <p><code>git bisect good 2131k3 </code> mark the last known commit as good, code was working properly back then</p>
+    <p><code>git bisect bad</code> mark current commit as bad, so bisect can propose a new commit to test</p>
+    <p><code>git bisect reset</code> exit bisect</p>
+
+
+</article>
+
+</body>
+</html>

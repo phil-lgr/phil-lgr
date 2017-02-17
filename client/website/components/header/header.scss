@@ -1,0 +1,21 @@
+@import "../../styles/utilities/index";
+
+header {
+  @include flexbox(row, center, center);
+}
+
+.__wrapper {
+  @include flexbox(row, flex-start, center);
+  flex-grow: 1;
+
+  padding: 1em;
+  max-width: $breakpoint-desktop-small;
+
+  > button:first-child {
+    margin-right: auto;
+  }
+}
+
+.__link {
+  margin-right: 1em;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('ejs-loader!../../../shared/templates/head.html')() %>
+    <%= require('ejs-loader!../../../shared/templates/csp.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
+</head>
+<body>
+<%= require('ejs-loader!../../components/header/header.html')() %>
+
+
+<article class="portfolio">
+
+    <%= require('ejs-loader!./portfolio-projects.html')
+        ({projects: require('../../services/data/projects/projects.data.js').default}) %>
+
+</article>
+
+</body>
+<%= require('ejs-loader!../../../shared/templates/firebase-scripts.html')() %>
+</html>

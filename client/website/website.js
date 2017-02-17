@@ -1,4 +1,4 @@
-import './components/example-component/header';
+// import './components/example-component/header';
 
 import './styles/typography/work-sans-font.css';
-import './styles/website.scss';
+import './website.scss';

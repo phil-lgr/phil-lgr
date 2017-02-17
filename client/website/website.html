@@ -2,8 +2,109 @@
 <html lang="en">
 <%= require('ejs-loader!./website-head.html')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
 <body>
-<div>
-    Hello Website
+<div class="website__wrapper">
+    <div class="website__sidebar">
+        <img class="website__sidebar-picture"
+             src="https://res.cloudinary.com/dtsgw3gx6/image/upload/w_600,h_600,c_crop,g_face/v1487312993/phil.jpg">
+        <h1>
+            Phil Léger.<br/>
+            Front End Developer.
+        </h1>
+
+        <hr/>
+
+        <p class="website__sidebar-text">
+            ~3.7 years of experience as front end dev, expert in JavaScript,
+            HTML, CSS/SASS, expert in AngularJS, adopting Angular (>2.x.x)
+            & React, favorite topics right now: ES6 JS, TypeScript, Webpack,
+            web performance, PWA, service workers and more.
+        </p>
+
+        <hr/>
+
+        <p class="website__sidebar-text">2/10/17 - Hello, I am currently giving my site
+            a much needed update to include recent projects... I've been busy.
+        </p>
+
+        <hr/>
+
+        <p class="website__sidebar-text">You can reach me by email or linkedin.</p>
+
+        <a class="website__sidebar-a"
+           href="mailto:pleger2@gmail.com">pleger2@gmail dot com</a>
+
+        <a class="website__sidebar-a"
+           href="linkedin.com/in/pleger1/">linkedin.com/in/pleger1</a>
+
+    </div>
+
+    <div class="website__projects">
+
+        <% var projects = require('./services/data/projects/projects.data.js').default;%>
+
+        <h1>Recent Projects</h1>
+
+        <% for(var i=0; i<projects.length; i++) {%>
+
+        <% var date = new Date(projects[i].releaseDate) %>
+
+        <div class="website__project">
+
+            <h2><%= projects[i].name %> - <%= projects[i].duration %> - (<%= (date.getMonth()+1) %>/<%= date.getFullYear() %>)</h2>
+            <hr>
+            <p><%= projects[i].shortDescription %></p>
+            <p><%= projects[i].longDescription %></p>
+
+            <!--<div><b>Client:</b> <%= projects[i].client %></div>-->
+            <!--<div><%= projects[i].team %></div>-->
+
+            <% if(projects[i].imagesURLs.length) {%>
+            <h3>Screenshots:</h3>
+            <div class="website__screenshots">
+                <% for(var j=0; j<projects[i].imagesURLs.length; j++) {%>
+                <img class="website__screenshot" src="<%= projects[i].imagesURLs[j] %>"/>
+                <% } %>
+            </div>
+            <% } %>
+
+
+            <h3>Activities:</h3>
+            <ul class="website__list">
+                <% for(var j=0; j<projects[i].activities.length; j++) {%>
+                <li><%= projects[i].activities[j].name %></li>
+                <% } %>
+            </ul>
+
+            <h3>Highlights:</h3>
+            <ul class="website__list">
+                <% for(var j=0; j<projects[i].highlights.length; j++) {%>
+                <li><%= projects[i].highlights[j] %></li>
+                <% } %>
+            </ul>
+
+            <div class="website__tags">
+                <% for(var j=0; j<projects[i].languages.length; j++) {%>
+                <div class="website__tag website__tag--language"><%= projects[i].languages[j].name %></div>
+                <% } %>
+            </div>
+
+            <div class="website__tags">
+                <% for(var j=0; j<projects[i].libraries.length; j++) {%>
+                <div class="website__tag website__tag--library"><%= projects[i].libraries[j].name %></div>
+                <% } %>
+            </div>
+
+            <div class="website__tags">
+                <% for(var j=0; j<projects[i].platforms.length; j++) {%>
+                <div class="website__tag website__tag--platform"><%= projects[i].platforms[j].name %></div>
+                <% } %>
+            </div>
+
+        </div>
+
+        <% } %>
+    </div>
+
 </div>
 </body>
 </html>

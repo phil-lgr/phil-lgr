@@ -16,7 +16,8 @@
     "prod": "npm run prod:website & npm run prod:app & npm run prod:cordova",
     "prod:website": "npm run clean:dist:website && webpack --config webpack.prod.website.config.js",
     "prod:app": "npm run clean:dist:app && webpack --config webpack.prod.app.config.js",
-    "prod:cordova": "npm run clean:dist:cordova && webpack --config webpack.prod.cordova.config.js"
+    "prod:cordova": "npm run clean:dist:cordova && webpack --config webpack.prod.cordova.config.js",
+    "deploy": "npm run prod:website && firebase deploy --project phil-lgr"
   },
   "repository": {
     "type": "git",
