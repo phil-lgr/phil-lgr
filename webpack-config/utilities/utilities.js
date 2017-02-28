@@ -1,9 +1,9 @@
 const _ = require('lodash');
 
-function mapPropToObject(entries, prop) {
+function mapArrayOfObjectPropToProp(arrayOfObjects, propName, propValueName) {
     let mappedEntries = {};
-    _.map(entries, (entry) => {
-        mappedEntries[entry.name] = entry[prop]
+    _.map(arrayOfObjects, (obj) => {
+        mappedEntries[obj[propName]] = obj[propValueName]
     });
     return mappedEntries;
 }
@@ -13,6 +13,6 @@ function isWebpackDevServer() {
 }
 
 module.exports = {
-    mapPropToObject: mapPropToObject,
+    mapArrayOfObjectPropToProp: mapArrayOfObjectPropToProp,
     isWebpackDevServer: isWebpackDevServer,
 };
