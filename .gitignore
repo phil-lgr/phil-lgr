@@ -24,3 +24,4 @@ npm-debug.log
 /client/cordova/plugins/
 /client/cordova/hooks/
 /client/cordova/www/
+webpack-visualizer-stats.html

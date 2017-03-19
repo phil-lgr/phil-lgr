@@ -8,7 +8,10 @@ let configCordova = new CommonConfig();
 // cordova build
 configCordova.entry = utilities.mapArrayOfObjectPropToProp(require('./webpack-config/entries/cordova-entries'), 'name', 'path');
 configCordova.output = require('./webpack-config/output.conf').prodCordova;
-configCordova.externals = _.assign(configCordova.externals, utilities.mapArrayOfObjectPropToProp(require('./webpack-config/external-libraries.conf').app, 'name', 'importName'));
+configCordova.externals = _.assign(configCordova.externals,
+    [
+        utilities.mapArrayOfObjectPropToProp(require('./webpack-config/external-libraries.conf').app, 'name', 'importName')
+    ]);
 configCordova.devtool = require('./webpack-config/source-map.conf').devtool.prod;
 configCordova.module.rules.push(...require('./webpack-config/loaders.conf').prod);
 configCordova.plugins.push(...require('./webpack-config/plugins.conf').prodCordova);

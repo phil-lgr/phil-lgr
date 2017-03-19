@@ -3,11 +3,11 @@ const path = require('path');
 module.exports = {
     contentBase: path.join(__dirname, "client"),
     compress: false,
-    watch: true,
     // to change host with npm start, add "-- --host=localhost"
     // to change port with npm start, add "-- --port=9001"
     port: 9000,
     historyApiFallback: true,
+    watchContentBase: true,
     watchOptions: {
         aggregateTimeout: 300, poll: 1000
     },
