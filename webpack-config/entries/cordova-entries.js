@@ -8,8 +8,5 @@ module.exports = [
         template: './client/app/app.html',
         filename: 'index.html',
         isCordovaApp: true,
-        chunks: ['cordova-vendor', 'cordova']
-    }, {
-        name: 'cordova-vendor',
-        path: './client/app/app-vendor'
+        chunks: ['vendor-cordova', 'cordova']
     }];

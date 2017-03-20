@@ -14,13 +14,14 @@ module.exports = {
         copyPluginConf.common,
     ],
     dev: [
-        // commonChunkPluginConf.dev,
+        commonChunkPluginConf.app,
+        commonChunkPluginConf.website,
         copyPluginConf.dev,
         loaderOptionsPluginConf.dev,
         ...htmlPluginConf.dev
     ],
     prodWebsite: [
-        // commonChunkPluginConf.prod,
+        commonChunkPluginConf.website,
         copyPluginConf.prodWebsite,
         loaderOptionsPluginConf.prod,
         ...htmlPluginConf.prodWebsite,
@@ -31,7 +32,7 @@ module.exports = {
         duplicatePackageCheckerPluginConf
     ],
     prodApp: [
-        // commonChunkPluginConf.prod,
+        commonChunkPluginConf.app,
         copyPluginConf.prodApp,
         loaderOptionsPluginConf.prod,
         ...htmlPluginConf.prodApp,
@@ -41,7 +42,7 @@ module.exports = {
         duplicatePackageCheckerPluginConf
     ],
     prodCordova: [
-        // commonChunkPluginConf.prod,
+        commonChunkPluginConf.cordova,
         copyPluginConf.prodCordova,
         loaderOptionsPluginConf.prod,
         ...htmlPluginConf.prodCordova,

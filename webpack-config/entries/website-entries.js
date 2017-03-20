@@ -10,14 +10,11 @@ module.exports = [
         path: './client/website/website',
         template: './client/website/website.html',
         filename: isDevServer ? 'website.html' : 'index.html',
-        chunks: ['website-vendor', 'website']
+        chunks: ['vendor-website', 'website']
     }, {
         name: 'example-page',
         path: './client/website/pages/example-page/example-page',
         template: './client/website/pages/example-page/example-page.html',
         filename: 'example-page.html',
-        chunks: ['website-vendor', 'example-page']
-    }, {
-        name: 'website-vendor',
-        path: './client/website/website-vendor.js'
+        chunks: ['vendor-website', 'example-page']
     }];
