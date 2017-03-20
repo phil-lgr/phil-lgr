@@ -9,11 +9,13 @@ const closureCompilerPluginConf = require('./plugins/closure-compiler.plugin.con
 const extractTextPluginConf = require('./plugins/extract-text.plugin.conf.js');
 const webpackVisualizerPlugin = require('./plugins/webpack-visualizer.plugin.conf');
 const contextReplacementPlugin = require('./plugins/context-replacement.plugin.conf.js');
+const lodashModuleReplacementPlugin = require('./plugins/lodash-webpack.plugin.conf.js');
 
 module.exports = {
     common: [
         copyPluginConf.common,
-        contextReplacementPlugin
+        contextReplacementPlugin,
+        lodashModuleReplacementPlugin
     ],
     dev: [
         commonChunkPluginConf.app,
