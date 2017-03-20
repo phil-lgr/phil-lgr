@@ -8,10 +8,12 @@ const uglifyPluginConf = require('./plugins/uglify.plugin.conf.js');
 const closureCompilerPluginConf = require('./plugins/closure-compiler.plugin.conf');
 const extractTextPluginConf = require('./plugins/extract-text.plugin.conf.js');
 const webpackVisualizerPlugin = require('./plugins/webpack-visualizer.plugin.conf');
+const contextReplacementPlugin = require('./plugins/context-replacement.plugin.conf.js');
 
 module.exports = {
     common: [
         copyPluginConf.common,
+        contextReplacementPlugin
     ],
     dev: [
         commonChunkPluginConf.app,

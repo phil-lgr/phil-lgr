@@ -16,9 +16,10 @@
     "prod": "npm run prod:website & npm run prod:app & npm run prod:cordova",
     "prod:website": "npm run clean:dist:website && webpack --config webpack.prod.website.config.js",
     "prod:app": "npm run clean:dist:app && webpack --config webpack.prod.app.config.js",
+    "prod:cordova": "npm run clean:dist:cordova && webpack --config webpack.prod.cordova.config.js && npm run pre-deploy:cordova",
+    "pre-deploy:cordova": "npm run rimraf -- client/cordova/www/ && cp -r dist/cordova/ client/cordova/www",
     "serve:prod:website": "npm run prod:website && serve dist/website",
-    "serve:prod:app": "npm run prod:app && serve dist/app",
-    "prod:cordova": "npm run clean:dist:cordova && webpack --config webpack.prod.cordova.config.js"
+    "serve:prod:app": "npm run prod:app && serve dist/app"
   },
   "repository": {
     "type": "git",
