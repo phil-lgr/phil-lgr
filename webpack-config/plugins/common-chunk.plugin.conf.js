@@ -1,22 +1,29 @@
 const webpack = require('webpack');
+const path = require('path');
 const utilities = require('../utilities/utilities');
-const entries = require('../entries/dev-entries');
+const appEntries = require('../entries/app-entries');
+const websiteEntries = require('../entries/website-entries');
+const cordovaEntries = require('../entries/cordova-entries');
 const _ = require('lodash');
 
-const commonChunks = _.filter(_.flatMap(entries, 'name'), (entryName) => {
-    return entryName !== 'vendor'
-});
+const appChunks = _.flatMap(appEntries, 'name');
+const websiteChunks = _.flatMap(websiteEntries, 'name');
+const cordovaChunks = _.flatMap(cordovaEntries, 'name');
 
-function commonChunkPluginGenerator(name = 'common', chunks = [], hash = true) {
+function commonChunkPluginGenerator(name, chunks, hash = true) {
     return new webpack.optimize.CommonsChunkPlugin({
         name: name,
-        filename: hash ? 'common.bundle.[hash].js' : 'common.bundle.js',
-        chunks: chunks
+        filename: hash ? `${name}.bundle.[hash].js` : `${name}.bundle.js`,
+        chunks: chunks,
+        minChunks: function (module, count) {
+            return module.context && module.context.indexOf("client") === -1;
+        }
     })
 }
 
 module.exports = {
-    dev: commonChunkPluginGenerator('common', commonChunks, false /*hash*/),
-    prod: commonChunkPluginGenerator('common', commonChunks, true /*hash*/)
+    website: commonChunkPluginGenerator('vendor-website', websiteChunks, true /*hash*/),
+    app: commonChunkPluginGenerator('vendor-app', appChunks, true /*hash*/),
+    cordova: commonChunkPluginGenerator('vendor-cordova', cordovaChunks, true /*hash*/)
 };
 

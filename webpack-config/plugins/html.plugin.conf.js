@@ -18,10 +18,10 @@ const minifyHtmlOptions = {
     dev: false
 };
 
-const devEntriesForHtmlPlugin = filterVendorEntry(devEntries);
-const appEntriesForHtmlPlugin = filterVendorEntry(appEntries);
-const websiteEntriesForHtmlPlugin = filterVendorEntry(websiteEntries);
-const cordovaEntriesForHtmlPlugin = filterVendorEntry(cordovaEntries);
+const devEntriesForHtmlPlugin = devEntries;
+const appEntriesForHtmlPlugin = appEntries;
+const websiteEntriesForHtmlPlugin = websiteEntries;
+const cordovaEntriesForHtmlPlugin = cordovaEntries;
 
 let htmlPluginConf = {
     dev: [],
@@ -61,7 +61,7 @@ function htmlWebpackPluginGenerator(entry, minifyHtmlOptions) {
 }
 
 function chunksSortMode(chunk1, chunk2) {
-    var orders = ['common', 'app-vendor', 'website-vendor', 'cordova-vendor', 'vendor'];
+    var orders = ['vendor-app', 'vendor-website', 'vendor-cordova'];
     var order1 = orders.indexOf(chunk1.names[0]);
     var order2 = orders.indexOf(chunk2.names[0]);
     if (order1 < order2) {

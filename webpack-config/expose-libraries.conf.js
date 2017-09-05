@@ -1,6 +1,6 @@
 module.exports = [
     {
-        libName: 'jquery',
+        libName: 'jquery/dist/jquery.slim',
         exposeName: 'JQuery'
     }
 ];
